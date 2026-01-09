@@ -6,7 +6,7 @@ RUN composer install
 
 COPY . /app/
 
-FROM php:alpine
+FROM php:8.5.2RC1-cli-alpine3.23
 COPY --from=build /app /app
 RUN chown -R www-data /app/
 
